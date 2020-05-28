@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {tweets} from './tweets'
+import Tweet from '../containers/Tweet';
 
-import tweets from 'tweets'
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        tweets
+        {tweets.map(tweet =>
+            <Tweet
+                tweet={tweet} />
+            )}
       </div>
     );
   }
