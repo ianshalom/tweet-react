@@ -11,7 +11,12 @@ class Tweet extends React.Component {
       <Actions
           user={this.props.tweet.user.screen_name}
           name={this.props.tweet.user.name}
-          body={this.props.tweet.text} />
+          created={this.props.tweet.created_at}
+          body={this.props.tweet.text}
+          retweet={this.props.tweet.retweet_count}
+          favorite={this.props.tweet.favorite_count}
+          />
+          <hr></hr>
       </div>
     );
   }
